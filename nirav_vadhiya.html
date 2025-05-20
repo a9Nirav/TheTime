@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Thetimelesshuesstudio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Video Player -->
+        <video id="player" controls poster="img/new-img/niravakruti/02.jpg">
+            <source src="img/new-img/video/TEASER.mp4" type="video/mp4" size="720">
+            <source src="img/new-img/video-new2.mp4" type="video/mp4" size="480">
+        </video>
+    </div>
+
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+        <script>
+            // Initialize Plyr
+            const player = new Plyr('#player', {
+                controls: [
+                    'play-large', // Large play button
+                    'play',       // Play/pause button
+                    'progress',   // Progress bar
+                    'current-time', // Current time
+                    'mute',       // Mute button
+                    'volume',     // Volume control
+                    'settings',   // Settings icon
+                    'fullscreen'  // Fullscreen toggle
+                ],
+                settings: ['quality'], // Add quality to settings
+                quality: {
+                    default: 720, // Default quality
+                    options: [720, 480], // Available quality options
+                    forced: true, // Forces manual quality switching
+                    onChange: (quality) => console.log(`Quality changed to: ${quality}p`)
+                }
+            });
+        </script>
+</body>
+
+</html>
