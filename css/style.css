@@ -659,6 +659,12 @@ html {
     height: 650px !important;
   }
 
+  @media only screen and (max-width: 1024px){
+ .film-height{
+    height: 460px !important;
+  }
+
+  }
   .custom-thumbnail {
     position: absolute;
     top: 0;
