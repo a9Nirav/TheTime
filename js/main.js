@@ -100,25 +100,44 @@
 
 // for phone view class name change
 
+// function switchClassBasedOnScreenSize() {
+//     var element = document.getElementById('myElement');
+//     if (window.innerWidth <= 600) {
+//         element.className = 'container';
+//         // element.className = 'background1';
+//     }
+//     else if (window.innerWidth <= 1400) {
+//         element.className = 'container-xll';
+//         // element.className = 'background1';
+//     }
+//      else {
+//         // element.className = 'container-fluid';
+//         // element.className = 'background1';
+//     }
+// }
+
+// // Call the function on page load and on window resize
+// window.addEventListener('load', switchClassBasedOnScreenSize);
+// window.addEventListener('resize', switchClassBasedOnScreenSize);
+
+// new code add 17 6 25
+
 function switchClassBasedOnScreenSize() {
     var element = document.getElementById('myElement');
+    if (!element) return;
+
     if (window.innerWidth <= 600) {
         element.className = 'container';
-        // element.className = 'background1';
-    }
-    else if (window.innerWidth <= 1400) {
+    } else if (window.innerWidth <= 1400) {
         element.className = 'container-xll';
-        // element.className = 'background1';
-    }
-     else {
-        // element.className = 'container-fluid';
-        // element.className = 'background1';
     }
 }
 
-// Call the function on page load and on window resize
-window.addEventListener('load', switchClassBasedOnScreenSize);
-window.addEventListener('resize', switchClassBasedOnScreenSize);
+document.addEventListener('DOMContentLoaded', function () {
+    switchClassBasedOnScreenSize();
+    window.addEventListener('resize', switchClassBasedOnScreenSize);
+});
+
 
 
 
