@@ -270,7 +270,7 @@
                 <p class="mb-0 text-dark ">Select:-</span>
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-2">
                     <li class="nav-item me-2">
-                        <a class="active text-dark" data-bs-toggle="pill" href="#tab-0">All | </a>
+                        <a class=" text-dark" data-bs-toggle="pill" href="#tab-0">All | </a>
                     </li>
                     <li class="nav-item me-2">
                         <a class=" text-dark" data-bs-toggle="pill" href="#tab-1">Wedding | </a>
@@ -653,7 +653,7 @@
 
 
 
-                <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div id="tab-1" class="tab-pane fade show p-0 ">
                     <div class="row g-5">
 
 
@@ -1091,15 +1091,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // If URL has hash, activate that tab correctly
-            if (window.location.hash) {
-                // Remove 'active' and 'show' classes from all tabs and contents
-                document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('.tab-pane').forEach(el => {
-                    el.classList.remove('active', 'show');
-                });
 
-                // Find the target tab and activate it
+            // Check if URL has hash
+            if (window.location.hash) {
+                // Step 1: Remove active classes from all tabs and tab contents
+                document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active', 'show'));
+
+                // Step 2: Activate the tab from URL hash
                 var triggerEl = document.querySelector('a[href="' + window.location.hash + '"]');
                 if (triggerEl) {
                     var tab = new bootstrap.Tab(triggerEl);
@@ -1107,7 +1106,7 @@
                 }
             }
 
-            // Listen to tab changes and update the URL hash
+            // Listen for tab changes and update URL hash
             var tabLinks = document.querySelectorAll('a[data-bs-toggle="pill"]');
             tabLinks.forEach(function (tabLink) {
                 tabLink.addEventListener('shown.bs.tab', function (e) {
