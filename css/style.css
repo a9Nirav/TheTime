@@ -194,6 +194,9 @@ body {
     color: #bf2727 !important;
 }
 
+.my-color{
+    background-color:#bf2727 ;
+}
 
 .text13 {
     font-size: 13px;
@@ -221,6 +224,11 @@ body {
 }
 
 @media (max-width: 600px) {
+
+
+    .m-in-phone{
+        margin-top: 20px !important;
+    }
 
 .nirav-img{
     height: 100%;
@@ -1881,21 +1889,28 @@ transition: 3s;
 
 
 .call-btn {
-    background-color: #0d6efd;
+    background-color: #bf2727;
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 14px;
 }
 
+.call-btn:hover{
+    color: #fff;
+}
 
 .mail-btn {
-    background-color: #198754;
+    background-color: #bf2727;
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 14px;
+   
 }
 
-
+.mail-btn:hover{
+    color: #fff;
+   
+}
 
 
 
