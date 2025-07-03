@@ -68,7 +68,7 @@
 
                     <a href="contact.html" class="nav-item nav-link text-dark active ">Contact</a>
                     <div class="d-flex">
-                       
+
                         <a href="https://www.instagram.com/the_timelesshues_studio/"
                             class="nav-item nav-link text-dark"> <i class="fab fa-instagram  text-dark"></i></a>
                         <a href="https://wa.me/+919723446144" class="nav-item nav-link text-dark"> <i
@@ -100,7 +100,9 @@
             <div class="row g-5 justify-content-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-inline-block rounded-pill bg-secondary text-dark py-1 px-3 mb-3">Contact Us</div>
-                    <div class="">Please fill in the form below and provide as much details as possible to help us create an accurate quote.  <b> hello@thetimelesshuesstudio.com</b> | <b> +91 97234 46144</b></div>
+                    <div class="">Please fill in the form below and provide as much details as possible to help us
+                        create an accurate quote. <b> hello@thetimelesshuesstudio.com</b> | <b> +91 97234 46144</b>
+                    </div>
                     <!-- <p class=" mb-3 text-white text22">If You Have Any Query, Please Contact Us</p> -->
                     <form method="POST"
                         action="https://script.google.com/macros/s/AKfycbw5LDXItxswTE8jhVGXpL0U4iuZOHUXcEDCQqBp_NMrcS2MhlSIsO3rLGaLljY7GAGv/exec"
@@ -132,11 +134,13 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="Phone" placeholder="Phone"
-                                        name="Phone" onblur="validatePhone();">
+                                    <input type="text" class="form-control" id="Phone" placeholder="Phone" name="Phone"
+                                        maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                        onblur="validatePhone();">
                                     <label for="Phone">Phone (required)</label>
                                     <span class="error-message" id="phoneError" style="color: red;"></span>
                                 </div>
+
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
@@ -226,18 +230,19 @@
 
             </div>
         </div>
-      <div class="container-fluid copyright p-0 pb-3">
-          <div class="container">
-              <div class="row d-flex justify-content-end ">
-                  <div class="col-md-12 text-center text-dark text-md-end mb-3 mb-md-0">
-                      <a href="" class="text-dark">© Copyright 2024  thetimelesshuesstudio.com</a>, All Rights Reserved. 
-                  </div>
+        <div class="container-fluid copyright p-0 pb-3">
+            <div class="container">
+                <div class="row d-flex justify-content-end ">
+                    <div class="col-md-12 text-center text-dark text-md-end mb-3 mb-md-0">
+                        <a href="" class="text-dark">© Copyright 2024 thetimelesshuesstudio.com</a>, All Rights
+                        Reserved.
+                    </div>
 
-                
 
-              </div>
-          </div>
-      </div>
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer End -->
 

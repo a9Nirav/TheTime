@@ -209,13 +209,20 @@ document.addEventListener('DOMContentLoaded', function () {
                   }
           
                   function validatePhone() {
-                      const phone = document.getElementById("Phone").value;
-                      if (phone.length < 10) {
-                          showError("phoneError", "Please enter a valid phone number.");
-                      } else {
-                          clearError("phoneError");
-                      }
-                  }
+    const phone = document.getElementById("Phone").value.trim();
+    
+    // Regex for 10-digit Indian phone numbers starting with 6-9
+    const phonePattern = /^[6-9]\d{9}$/;
+
+    if (!phonePattern.test(phone)) {
+        showError("phoneError", "Please enter a valid 10-digit phone number.");
+        return false;
+    } else {
+        clearError("phoneError");
+        return true;
+    }
+}
+
           
                   function validateLocation() {
                       const location = document.getElementById("Location").value;
@@ -283,6 +290,19 @@ document.addEventListener('DOMContentLoaded', function () {
                           error.style.display = "none"; // Hide the error message
                       });
                   }
+
+
+                  function showError(id, message) {
+    const element = document.getElementById(id);
+    element.textContent = message;
+    element.style.display = "block";
+}
+
+function clearError(id) {
+    const element = document.getElementById(id);
+    element.textContent = "";
+    element.style.display = "none";
+}
 
 
 
